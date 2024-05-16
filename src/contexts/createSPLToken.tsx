@@ -24,7 +24,7 @@ export async function createSPLToken(owner: PublicKey, wallet: WalletContextStat
             .use(walletAdapterIdentity(wallet))
             .use(bundlrStorage({
                 address: 'https://node1.bundlr.network',
-                providerUrl: "https://cosmopolitan-greatest-wave.solana-mainnet.quiknode.pro/85222162e13661be38ab86fe26925e667496812d/",
+                providerUrl: "https://dry-frosty-replica.solana-mainnet.quiknode.pro/16eca0a5175c9561ee3eb0577a5caab0ad5d268d/",
                 timeout: 60000,
             }));
 

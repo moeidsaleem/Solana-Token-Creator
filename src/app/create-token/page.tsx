@@ -22,7 +22,7 @@ interface IAlertState {
     severity: 'success' | 'info' | 'warning' | 'error' | undefined
 }
 
-let mintAddress: PublicKey | undefined = undefined;
+let mintAddress: PublicKey | undefined = new PublicKey("");
 let marketId: PublicKey | null = null;
 let lpMint: PublicKey | null | undefined = null;
 
@@ -44,7 +44,7 @@ export default function Home() {
         severity: undefined,
     })
 
-    const [step, setStep] = useState(6);
+    const [step, setStep] = useState(1);
 
     const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -600,7 +600,7 @@ export default function Home() {
                     <div className="flex flex-col max-w-[480px] w-full bg-secondary-200 rounded-xl p-6 gap-6">
                         <div className='flex items-center justify-between'>
                             <div className='text-white text-2xl font-semibold'>
-                                Burn
+                                Burn Me
                             </div>
                             <Image
                                 src='/icons/x.svg'
