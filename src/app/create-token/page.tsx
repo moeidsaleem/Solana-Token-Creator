@@ -22,7 +22,7 @@ interface IAlertState {
     severity: 'success' | 'info' | 'warning' | 'error' | undefined
 }
 
-let mintAddress: PublicKey | undefined = new PublicKey("");
+let mintAddress: PublicKey | undefined = new PublicKey("HarsWxpmBbkGQLSzXv84UdjUy6uFL5t2AeWmRmy2MYuL");
 let marketId: PublicKey | null = null;
 let lpMint: PublicKey | null | undefined = null;
 
