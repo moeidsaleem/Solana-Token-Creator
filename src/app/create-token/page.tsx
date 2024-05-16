@@ -6,11 +6,11 @@ import { createSPLToken } from '@/contexts/createSPLToken';
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import LandingHeader from '@/components/LandingHeader/LandingHeader';
 import { useRouter } from 'next/navigation';
-import { createMarket } from '@/contexts/createMarket';
+// import { createMarket } from '@/contexts/createMarket';
 import { PublicKey } from '@solana/web3.js';
 import { revokeMintAuthority } from '@/contexts/revokeMintAuthority';
 import { revokeFreezeAuthority } from '@/contexts/revokeFreezeAuthority';
-import { createLiquidity } from '@/contexts/createLiquidity';
+// import { createLiquidity } from '@/contexts/createLiquidity';
 import { burnToken } from '@/contexts/burnToken';
 import { ASSOCIATED_TOKEN_PROGRAM_ID, TOKEN_PROGRAM_ID, Token } from '@solana/spl-token';
 import { Snackbar } from '@material-ui/core'
@@ -92,24 +92,24 @@ export default function Home() {
     }
 
     const handleCreateMarket = async () => {
-        const baseMint = mintAddress != undefined ? mintAddress : new PublicKey("AXVANX9Exmoghok94dQkdLbQddpe9NjQkQ9heEcauDiF");
-        const baseDecimal = tokenDecimal;
-        const quoteMint = new PublicKey("So11111111111111111111111111111111111111112");
-        const quoteDecimal = 9;
-        const orderSize = 1;
-        const tickSize = 0.01;
-        setAlertState({
-            open: true,
-            message: 'Loading...',
-            severity: 'info',
-        })
-        marketId = await createMarket(connection, wallet, baseMint, baseDecimal, quoteMint, quoteDecimal, orderSize, tickSize);
-        console.log("creating market id ====>", marketId);
-        setAlertState({
-            open: false,
-            message: 'Done',
-            severity: 'info',
-        })
+        // const baseMint = mintAddress != undefined ? mintAddress : new PublicKey("AXVANX9Exmoghok94dQkdLbQddpe9NjQkQ9heEcauDiF");
+        // const baseDecimal = tokenDecimal;
+        // const quoteMint = new PublicKey("So11111111111111111111111111111111111111112");
+        // const quoteDecimal = 9;
+        // const orderSize = 1;
+        // const tickSize = 0.01;
+        // setAlertState({
+        //     open: true,
+        //     message: 'Loading...',
+        //     severity: 'info',
+        // })
+        // marketId = await createMarket(connection, wallet, baseMint, baseDecimal, quoteMint, quoteDecimal, orderSize, tickSize);
+        // console.log("creating market id ====>", marketId);
+        // setAlertState({
+        //     open: false,
+        //     message: 'Done',
+        //     severity: 'info',
+        // })
         setStep(5);
     }
 
@@ -247,7 +247,7 @@ export default function Home() {
             message: 'Transaction is in progress...',
             severity: 'info',
         })
-        lpMint = await createLiquidity(connection, wallet, baseMint, baseDecimal, quoteMint, quoteDecimal, orderSize, tickSize, marketId, tokenBalance, parseFloat(solBalance));
+        // lpMint = await createLiquidity(connection, wallet, baseMint, baseDecimal, quoteMint, quoteDecimal, orderSize, tickSize, marketId, tokenBalance, parseFloat(solBalance));
         setAlertState({
             open: false,
             message: 'Done',
